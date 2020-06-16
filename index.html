@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locabuy</title>
+    <link rel="icon" href="/Media/logo-2.png">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/3c5944ced7.js" crossorigin="anonymous"></script>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" 
+        crossorigin="anonymous">
+    <!-- Style Css -->
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<!-- Header -->
+<nav  class="fixed-top container-fluid">
+<div  class="grad1 row" style="height: 100%; text-align: center; align-items: center;">
+        <div class="col">
+            <a href="/mail.php"><img height="35rem" class="img-responsive" src="/Media/nav-3.png" alt="logo"></a></div>
+        <div  class="col"></div>
+        <div class="col"></div>
+
+        <div class="col">
+            <a href="#" data-toggle="tooltip" title="Search">
+                <svg class="bi bi-search" width="1.2em" viewBox="0 0 16 16" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z" />
+                    <path fill-rule="evenodd"
+                        d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z" />
+                </svg>
+            </a>
+        </div>
+        <div class="col">
+            <a href="#" data-toggle="tooltip" title="Notification">
+                <svg  class="bi bi-bell" width="1.2em" style="color: brown;" viewBox="0 0 16 16" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2z" />
+                    <path fill-rule="evenodd"
+                        d="M8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z" />
+                </svg>
+            </a>
+        </div>
+        <div class="col">
+            <a href="#" data-toggle="tooltip" title="Wishlist">
+                <svg class="bi bi-heart" width="1.2em" viewBox="0 0 16 16" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M8 2.748l-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z" />
+                </svg>
+            </a>
+        </div>
+        <div class="col">
+            <a href="#" data-toggle="tooltip" title="Cart">
+                <svg class="bi bi-cart3" width="1.2em"viewBox="0 0 16 16" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                </svg>
+            </a>
+        </div>
+        <div class="col">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a>
+            </div>
+            <span  style="font-size:1.2em  ; color: brown; cursor:pointer" onclick="openNav()"> &#9776; </span>
+            <script>
+                function openNav() {
+                    document.getElementById("mySidenav").style.width = "250px";
+                }
+
+                function closeNav() {
+                    document.getElementById("mySidenav").style.width = "0";
+                }
+            </script>
+
+
+        </div>
+
+    </div>
+</nav><br> <br>
+
+<!-- 1st Heading -->
+<div class="container-fluid ">
+    <p style="text-align: center; font-size: 1.5rem; font-family: cursive;">The Most Awazing Offers Are Here!</p>
+</div>
+
+<!-- Carousel -->
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner" >
+        <div class="carousel-item active"  >
+            <a href="#"><img class="d-block w-100" src="/Media/sale5.jpg" alt="First slide"></a>
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Item 1</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, sed culpa!</p>
+            </div>
+        </div>
+        <div class="carousel-item" >
+            <a href="#1"><img class="d-block w-100" src="/Media/sale4.jpg" alt="Second slide"></a>
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Item 2</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, sed culpa!</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <a href="#2"><img class="d-block w-100 " src="/Media/sale3.jpg" alt="Second slide"></a>
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Item 3</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, sed culpa!</p>
+            </div>
+        </div>
+        <div class="carousel-item"  >
+           <a href="#3"><img class="d-block w-100" src="/Media/sale2.jpg" alt="Fourth slide"></a>
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Item 4</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, sed culpa!</p>
+            </div>
+        </div>
+ 
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+</div>
+
+<!-- Most Loving/Ordered -->
+<div class="container-fluid" style="margin: 20px 0;">
+    <h3 style="font-family: cursive; text-align: center; ">The Best Sellers Are Here</h3>
+<div class="row">
+    <div class="col-4 col-md-3">
+        <div class="card card-decoration" >
+            <a href="#"><img src="/Media/Denim Jackets.jpeg" class="card-img-top" alt="..."></a>
+            <div class="card-body" >
+                <p class="card-title">Denim Jackets</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-4 col-md-3">
+        <div class="card card-decoration">
+            <a href="#"><img src="/Media/Formals.jpg" class="card-img-top" alt="..."> </a>
+            <div class="card-body">
+                <p class="card-title">Formal Shoes</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-4 col-md-3">
+        <div class="card card-decoration">
+            <a href="#"><img src="/Media/Masks.jpg" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+                <p class="card-title">Mask You Need</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-4 col-md-3">
+        <div class="card card-decoration">
+            <a href="#"><img src="/Media/Shoes.jpg" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+                <p class="card-title">Casual Shoes</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-4 col-md-3">
+        <div class="card card-decoration">
+            <a href="#"><img src="/Media/T-Shirt.jpeg" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+                <p class="card-title">T-shirt for boys</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-4 col-md-3">
+        <div class="card card-decoration">
+            <a href="#"><img src="/Media/Heels.jpg" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+                <p class="card-title">Heels</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-4 col-md-3">
+        <div class="card card-decoration">
+            <a href="#"><img src="/Media/girls top.jpg" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+                <p class="card-title">Tops for Girls</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-4 col-md-3">
+        <div class="card card-decoration">
+            <a href="#"><img src="/Media/jeans.jpeg" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+                <p class="card-title">Denim Jeans</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-4 col-md-3">
+        <div class="card card-decoration">
+            <a href="#"><img src="/Media/girls top.jpg" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+                <p class="card-title">Tops for Girls</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<?php
+echo "Hello World!";
+?>
+<!-- Quick Links -->
+<div class="container">
+    <h4 style="font-family:'Times New Roman', Times, serif; color: rgb(248, 62, 62); "  >  Quick Links </h4>
+<div class="row">
+    <div class="col-3 col-md-3">
+        <div class="card card-quicks">
+        <a href="#">
+        <img class="card-img-top" src="/Media/Your Bes.jpg" alt="">
+        </a>
+        </div>
+    </div>
+    <div class="col-3 col-md-3">
+        <div class="card card-quicks">
+            <a href="#">
+                <img class="card-img-top" src="/Media/Free.jpg" alt="">
+            </a>
+        </div>
+    </div>
+    <div class="col-3 col-md-3"  >
+        <div class="card card-quicks">
+            <a href="#">
+                <img  class="card-img-top" src="/Media/Exclusive.jpg" alt="">
+            </a>
+        </div>
+    </div>
+    <div class="col-3 col-md-3">
+        <div class="card card-quicks">
+            <a href="#">
+                <img class="card-img-top" src="/Media/Last.jpg" alt="">
+            </a>
+        </div>
+    </div>
+    <div class="col-3 col-md-3">
+        <div class="card card-quicks">
+            <a href="#">
+                <img class="card-img-top" src="/Media/Exclusive.jpg" alt="">
+            </a>
+        </div>
+    </div>
+    <div class="col-3 col-md-3">
+        <div class="card card-quicks">
+            <a href="#">
+                <img class="card-img-top" src="/Media/Your Bes.jpg" alt="">
+            </a>
+        </div>
+    </div><div class="col-3 col-md-3">
+        <div class="card card-quicks">
+            <a href="#">
+                <img class="card-img-top" src="/Media/Last.jpg" alt="">
+            </a>
+        </div>
+    </div><div class="col-3 col-md-3">
+        <div class="card card-quicks">
+            <a href="#">
+                <img class="card-img-top" src="/Media/Free.jpg" alt="">
+            </a>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<!-- shop Card -->
+<div class="container">
+<div class="card" style="border-radius: 0; border: 0; box-shadow: 1px 1px 10px #363636 ">
+    <div class="row">
+        <div class="col-5">
+            <img class="card-img" style="margin:.5vw ; height: 100%;" src="/Media/ny.jpg"  alt="...">
+        </div>
+        <div class="col-7">
+                <a target="_blanck" href="/shop.html">
+                    <div class="on-card-shop-name">Shop's Name</div>
+                </a>
+                <div class="shop-on-card-review">
+                    <span><svg class="bi bi-star-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="orange"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+                    </span> 4.3(1,489)  | 
+                    <svg class="bi bi-heart-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="red"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                    </svg> 18K
+                </div>
+                <div class="shop-area-on-card">
+                    <a href="#location-lalpur">Lalpur</a>
+                </div>
+                <div class="shop-address-on-card">
+                <svg class="bi bi-building" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M15.285.089A.5.5 0 0 1 15.5.5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5H1a.5.5 0 0 1-.5-.5v-6a.5.5 0 0 1 .418-.493l5.582-.93V3.5a.5.5 0 0 1 .324-.468l8-3a.5.5 0 0 1 .46.057zM7.5 3.846V8.5a.5.5 0 0 1-.418.493l-5.582.93V15h8v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.222l-7 2.624z" />
+                    <path fill-rule="evenodd" d="M6.5 15.5v-7h1v7h-1z" />
+                    <path
+                        d="M2.5 11h1v1h-1v-1zm2 0h1v1h-1v-1zm-2 2h1v1h-1v-1zm2 0h1v1h-1v-1zm6-10h1v1h-1V3zm2 0h1v1h-1V3zm-4 2h1v1h-1V5zm2 0h1v1h-1V5zm2 0h1v1h-1V5zm-2 2h1v1h-1V7zm2 0h1v1h-1V7zm-4 0h1v1h-1V7zm0 2h1v1h-1V9zm2 0h1v1h-1V9zm2 0h1v1h-1V9zm-4 2h1v1h-1v-1zm2 0h1v1h-1v-1zm2 0h1v1h-1v-1z" />
+                </svg> Circular Road, Near Lalpur Chowk, Lalpur, Ranchi
+                </div>
+
+                
+            </div>
+        </div>
+        <div class="container">
+            <hr style="padding: 0; margin: 15px;">
+        <div class="row">
+            <div class="col-3 shop-card-details-ques">Items:</div>
+            <div class="col-9 shop-card-details-ans">Kurta payjama, this that </div>
+        </div>
+        <div class="row">
+            <div class="col-3 shop-card-details-ques">Range</div>
+            <div class="col-9 shop-card-details-ans">Rs 500-5000</div>
+        </div>
+        <div class="row">
+            <div class="col-3 shop-card-details-ques">Hours</div>
+            <div class="col-9 shop-card-details-ans">10am -10pm</div>
+        </div>
+            <hr style=" margin: 15px 5px 0 5px">
+        </div>
+        <div class="container-fluid" >
+            <div class="row"style=>
+
+            <div class="col-4  bg-primary" style=" text-align: center; padding:10px 5px;">
+                <a style=" color: white; " href="#">
+                    <span class="fas fa-phone-alt"></span> Call</a>
+            </div>
+            <div class="col-4  bg-secondary" style=" text-align: center; padding:10px 5px;">
+                <a style=" color: white; " href="#">
+                    <span class="fas fa-book"></span> All Items</a>
+            </div>
+            <div class="col-4 bg-success" style=" text-align: center; padding:10px 5px;">
+               <a style=" color: white; " href="#">
+                    <span class="fas fa-store-alt"></span>Visit Shop</a>
+            </div>
+
+            </div>
+    </div>
+</div>
+</div>
+<!-- shop Card -->
+<div class="container">
+    <div class="card" style="border-radius: 0; border: 0;box-shadow: 1px 1px 10px #363636;">
+        <div class="row">
+            <div class="col-5">
+                <img class="card-img" style="margin:.5vw ; height: 100%;" src="/Media/ny.jpg" alt="...">
+            </div>
+            <div class="col-7">
+                <a  href="#shop link">
+                    <div class="on-card-shop-name">Shop's Name</div>
+                </a>
+                <div class="shop-on-card-review">
+                    <span><svg class="bi bi-star-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="orange"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+                    </span> 4.3(1,489) |
+                    <svg class="bi bi-heart-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="red"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                    </svg> 18K
+                </div>
+                <div class="shop-area-on-card">
+                    <a href="#location-lalpur">Lalpur</a>
+                </div>
+                <div class="shop-address-on-card">
+                    <svg class="bi bi-building" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M15.285.089A.5.5 0 0 1 15.5.5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5H1a.5.5 0 0 1-.5-.5v-6a.5.5 0 0 1 .418-.493l5.582-.93V3.5a.5.5 0 0 1 .324-.468l8-3a.5.5 0 0 1 .46.057zM7.5 3.846V8.5a.5.5 0 0 1-.418.493l-5.582.93V15h8v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.222l-7 2.624z" />
+                        <path fill-rule="evenodd" d="M6.5 15.5v-7h1v7h-1z" />
+                        <path
+                            d="M2.5 11h1v1h-1v-1zm2 0h1v1h-1v-1zm-2 2h1v1h-1v-1zm2 0h1v1h-1v-1zm6-10h1v1h-1V3zm2 0h1v1h-1V3zm-4 2h1v1h-1V5zm2 0h1v1h-1V5zm2 0h1v1h-1V5zm-2 2h1v1h-1V7zm2 0h1v1h-1V7zm-4 0h1v1h-1V7zm0 2h1v1h-1V9zm2 0h1v1h-1V9zm2 0h1v1h-1V9zm-4 2h1v1h-1v-1zm2 0h1v1h-1v-1zm2 0h1v1h-1v-1z" />
+                    </svg> Circular Road, Near Lalpur Chowk, Lalpur, Ranchi
+                </div>
+
+
+            </div>
+        </div>
+        <div class="container">
+            <hr style="padding: 0; margin: 15px;">
+            <div class="row">
+                <div class="col-3 shop-card-details-ques">Items:</div>
+                <div class="col-9 shop-card-details-ans">Kurta payjama, this that </div>
+            </div>
+            <div class="row">
+                <div class="col-3 shop-card-details-ques">Range</div>
+                <div class="col-9 shop-card-details-ans">Rs 500-5000</div>
+            </div>
+            <div class="row">
+                <div class="col-3 shop-card-details-ques">Hours</div>
+                <div class="col-9 shop-card-details-ans">10am -10pm</div>
+            </div>
+            <hr style=" margin: 15px 5px 0 5px">
+        </div>
+        <div class="container-fluid">
+            <div class="row" style=>
+
+                <div class="col-4  bg-primary" style=" text-align: center; padding:10px 5px;">
+                    <a style=" color: white; " href="#">
+                        <span class="fas fa-phone-alt"></span> Call</a>
+                </div>
+                <div class="col-4  bg-secondary" style=" text-align: center; padding:10px 5px;">
+                    <a style=" color: white; " href="#">
+                        <span class="fas fa-book"></span> All Items</a>
+                </div>
+                <div class="col-4 bg-success" style=" text-align: center; padding:10px 5px;">
+                    <a style=" color: white; " href="#">
+                        <span class="fas fa-store-alt"></span> Visit Shop</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- shop Card -->
+<div class="container">
+    <div class="card" style="border-radius: 0; border: 0; box-shadow: 1px 1px 10px #363636;">
+        <div class="row">
+            <div class="col-5">
+                <img class="card-img" style="margin:.5vw ; height: 100%;" src="/Media/ny.jpg" alt="...">
+            </div>
+            <div class="col-7">
+                <a  href="#shop link">
+                    <div class="on-card-shop-name">Shop's Name</div>
+                </a>
+                <div class="shop-on-card-review">
+                    <span><svg class="bi bi-star-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="orange"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+                    </span> 4.3(1,489) |
+                    <svg class="bi bi-heart-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="red"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                    </svg> 18K
+                </div>
+                <div class="shop-area-on-card">
+                    <a href="#location-lalpur">Lalpur</a>
+                </div>
+                <div class="shop-address-on-card">
+                    <svg class="bi bi-building" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M15.285.089A.5.5 0 0 1 15.5.5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5H1a.5.5 0 0 1-.5-.5v-6a.5.5 0 0 1 .418-.493l5.582-.93V3.5a.5.5 0 0 1 .324-.468l8-3a.5.5 0 0 1 .46.057zM7.5 3.846V8.5a.5.5 0 0 1-.418.493l-5.582.93V15h8v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.222l-7 2.624z" />
+                        <path fill-rule="evenodd" d="M6.5 15.5v-7h1v7h-1z" />
+                        <path
+                            d="M2.5 11h1v1h-1v-1zm2 0h1v1h-1v-1zm-2 2h1v1h-1v-1zm2 0h1v1h-1v-1zm6-10h1v1h-1V3zm2 0h1v1h-1V3zm-4 2h1v1h-1V5zm2 0h1v1h-1V5zm2 0h1v1h-1V5zm-2 2h1v1h-1V7zm2 0h1v1h-1V7zm-4 0h1v1h-1V7zm0 2h1v1h-1V9zm2 0h1v1h-1V9zm2 0h1v1h-1V9zm-4 2h1v1h-1v-1zm2 0h1v1h-1v-1zm2 0h1v1h-1v-1z" />
+                    </svg> Circular Road, Near Lalpur Chowk, Lalpur, Ranchi
+                </div>
+
+
+            </div>
+        </div>
+        <div class="container">
+            <hr style="padding: 0; margin: 15px;">
+            <div class="row">
+                <div class="col-3 shop-card-details-ques">Items:</div>
+                <div class="col-9 shop-card-details-ans">Kurta payjama, this that </div>
+            </div>
+            <div class="row">
+                <div class="col-3 shop-card-details-ques">Range</div>
+                <div class="col-9 shop-card-details-ans">Rs 500-5000</div>
+            </div>
+            <div class="row">
+                <div class="col-3 shop-card-details-ques">Hours</div>
+                <div class="col-9 shop-card-details-ans">10am -10pm</div>
+            </div>
+            <hr style=" margin: 15px 5px 0 5px">
+        </div>
+        <div class="container-fluid">
+            <div class="row" style=>
+
+                <div class="col-4  bg-primary" style=" text-align: center; padding:10px 5px;">
+                    <a style=" color: white; " href="#">
+                        <span class="fas fa-phone-alt"></span> Call</a>
+                </div>
+                <div class="col-4  bg-secondary" style=" text-align: center; padding:10px 5px;">
+                    <a style=" color: white; " href="#">
+                        <span class="fas fa-book"></span> All Items</a>
+                </div>
+                <div class="col-4 bg-success" style=" text-align: center; padding:10px 5px;">
+                    <a style=" color: white; " href="#">
+                        <span class="fas fa-store-alt"></span>Visit Shop</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- shop Card -->
+<div class="container">
+    <div class="card" style="border-radius: 0; border: 0;box-shadow: 1px 1px 10px #363636;">
+        <div class="row">
+            <div class="col-5">
+                <img class="card-img" style="margin:.5vw ; height: 100%;" src="/Media/ny.jpg" alt="...">
+            </div>
+            <div class="col-7">
+                <a  href="#shop link">
+                    <div class="on-card-shop-name">Shop's Name</div>
+                </a>
+                <div class="shop-on-card-review">
+                    <span><svg class="bi bi-star-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="orange"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.283.95l-3.523 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+                    </span> 4.3(1,489) |
+                    <svg class="bi bi-heart-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="red"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                    </svg> 18K
+                </div>
+                <div class="shop-area-on-card">
+                    <a href="#location-lalpur">Lalpur</a>
+                </div>
+                <div class="shop-address-on-card">
+                    <svg class="bi bi-building" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M15.285.089A.5.5 0 0 1 15.5.5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5H1a.5.5 0 0 1-.5-.5v-6a.5.5 0 0 1 .418-.493l5.582-.93V3.5a.5.5 0 0 1 .324-.468l8-3a.5.5 0 0 1 .46.057zM7.5 3.846V8.5a.5.5 0 0 1-.418.493l-5.582.93V15h8v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.222l-7 2.624z" />
+                        <path fill-rule="evenodd" d="M6.5 15.5v-7h1v7h-1z" />
+                        <path
+                            d="M2.5 11h1v1h-1v-1zm2 0h1v1h-1v-1zm-2 2h1v1h-1v-1zm2 0h1v1h-1v-1zm6-10h1v1h-1V3zm2 0h1v1h-1V3zm-4 2h1v1h-1V5zm2 0h1v1h-1V5zm2 0h1v1h-1V5zm-2 2h1v1h-1V7zm2 0h1v1h-1V7zm-4 0h1v1h-1V7zm0 2h1v1h-1V9zm2 0h1v1h-1V9zm2 0h1v1h-1V9zm-4 2h1v1h-1v-1zm2 0h1v1h-1v-1zm2 0h1v1h-1v-1z" />
+                    </svg> Circular Road, Near Lalpur Chowk, Lalpur, Ranchi
+                </div>
+
+
+            </div>
+        </div>
+        <div class="container">
+            <hr style="padding: 0; margin: 15px;">
+            <div class="row">
+                <div class="col-3 shop-card-details-ques">Items:</div>
+                <div class="col-9 shop-card-details-ans">Kurta payjama, this that </div>
+            </div>
+            <div class="row">
+                <div class="col-3 shop-card-details-ques">Range</div>
+                <div class="col-9 shop-card-details-ans">Rs 500-5000</div>
+            </div>
+            <div class="row">
+                <div class="col-3 shop-card-details-ques">Hours</div>
+                <div class="col-9 shop-card-details-ans">10am -10pm</div>
+            </div>
+            <hr style=" margin: 15px 5px 0 5px">
+        </div>
+        <div class="container-fluid">
+            <div class="row" style=>
+
+                <div class="col-4  bg-primary" style=" text-align: center; padding:10px 5px;">
+                    <a style=" color: white; " href="#">
+                        <span class="fas fa-phone-alt"></span> Call</a>
+                </div>
+                <div class="col-4  bg-secondary" style=" text-align: center; padding:10px 5px;">
+                    <a style=" color: white; " href="#">
+                        <span class="fas fa-book"></span> All Items</a>
+                </div>
+                <div class="col-4 bg-success" style=" text-align: center; padding:10px 5px;">
+                    <a style=" color: white; " href="#">
+                        <i class="fas fa-store-alt"></i> Visit Shop</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<p>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d234447.6699604847!2d85.18123756943764!3d23.343142495107628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDIzJzQ1LjYiTiA4NcKwMTYnMTAuNSJF!5e0!3m2!1sen!2sin!4v1591855133253!5m2!1sen!2sin"
+        width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+        tabindex="0"></iframe>
+</p>
+<p>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7734.863460003994!2d85.26718582497718!3d23.39484895641599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDIzJzQ1LjYiTiA4NcKwMTYnMTAuNSJF!5e0!3m2!1sen!2sin!4v1591855217493!5m2!1sen!2sin"
+        width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+        tabindex="0"></iframe>
+</p>
+
+<!-- footer -->
+<br><br>
+<div  class="fixed-bottom container-fluid grad1" style="background-color: rgb(159, 186, 216);" >
+    <div class="row" style="text-align: center; align-items: center;"  >
+        <div class="col"  >
+            <svg class="bi bi-house" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+  <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+            </svg><br> <div style="font-size: 0.75rem;">Home</div>
+        </div>
+        <div class="col"><svg class="bi bi-collection" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+                d="M14.5 13.5h-13A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5zm-13 1A1.5 1.5 0 0 1 0 13V6a1.5 1.5 0 0 1 1.5-1.5h13A1.5 1.5 0 0 1 16 6v7a1.5 1.5 0 0 1-1.5 1.5h-13zM2 3a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 0-1h-11A.5.5 0 0 0 2 3zm2-2a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7A.5.5 0 0 0 4 1z" />
+        </svg><br><div style="font-size: 0.75rem;">Collection</div></div>
+        <div class="col"><svg class="bi bi-shop" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+                d="M0 15.5a.5.5 0 0 1 .5-.5h15a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5zM3.12 1.175A.5.5 0 0 1 3.5 1h9a.5.5 0 0 1 .38.175l2.759 3.219A1.5 1.5 0 0 1 16 5.37v.13h-1v-.13a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.13H0v-.13a1.5 1.5 0 0 1 .361-.976l2.76-3.22z" />
+            <path
+                d="M2.375 6.875c.76 0 1.375-.616 1.375-1.375h1a1.375 1.375 0 0 0 2.75 0h1a1.375 1.375 0 0 0 2.75 0h1a1.375 1.375 0 1 0 2.75 0h1a2.375 2.375 0 0 1-4.25 1.458 2.371 2.371 0 0 1-1.875.917A2.37 2.37 0 0 1 8 6.958a2.37 2.37 0 0 1-1.875.917 2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.5h1c0 .76.616 1.375 1.375 1.375z" />
+            <path
+                d="M4.75 5.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm3.75 0a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm3.75 0a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z" />
+            <path fill-rule="evenodd"
+                d="M2 7.846V7H1v.437c.291.207.632.35 1 .409zm-1 .737c.311.14.647.232 1 .271V15H1V8.583zm13 .271a3.354 3.354 0 0 0 1-.27V15h-1V8.854zm1-1.417c-.291.207-.632.35-1 .409V7h1v.437zM3 9.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5V15H7v-5H4v5H3V9.5zm6 0a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-4zm1 .5v3h2v-3h-2z" />
+                
+        </svg><br><div style="font-size: 0.75rem;">Shop</div></div>
+        <div class="col"><svg class="bi bi-geo-alt" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+                d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+        </svg><br><div style="font-size: 0.75rem;">Nearby</div></div>
+        <div class="col"><svg class="bi bi-person-lines-fill" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+                d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm7 1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm0-3a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5zm2 9a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z" />
+        </svg><br><div style="font-size: 0.75rem;">Profile</div></div>
+    </ul>
+    </div>
+</div>
+
+
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+</body>
+</html>
